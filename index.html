@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tubig Padala Water Station</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <img src="tubig.padala.logo.png" alt="Tubig Padala Logo">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#how-to-order">How to Order</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PANEL 1: HOME -->
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <p class="small-heading">TUBIG PADALA WATER STATION</p>
+
+                    <h1>Fresh na inuming tubig, on the way sa bahay nyo!</h1>
+
+                    
+
+                    <a href="#products" class="button liquid-button">
+                        <span class="liquid"></span>
+                        <span class="btn-txt">Order Water</span>
+                    </a>
+
+                </div>
+
+                <div class="hero-image">
+                    <img src="last1.png"
+                        alt="Water gallon beside clean flowing water">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANEL 2: PRODUCTS -->
+        <section class="products section-padding" id="products">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="small-heading">OUR PRODUCTS</p>
+                    <h2>Choose Your Water</h2>
+                    <p>
+                        Select the type of drinking water you need.
+                        Delivery is included!
+                    </p>
+                </div>
+
+
+                <div class="product-container">
+
+                    <!-- MINERAL WATER -->
+                    <div class="product-card">
+
+                        <img src="download.png"
+                            alt="Water gallon container"
+                            class="product-image">
+
+                        <div class="product-info">
+
+                            <h3>Mineral Water</h3>
+
+                            <p>
+                                Clean and refreshing, perfect pang-araw-araw!
+                            </p>
+
+                            <h4>₱45.00 <span>/ gallon</span></h4>
+
+                            <button class="add-button" data-product="mineral">
+                                Add to Order
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PURIFIED WATER -->
+                    <div class="product-card">
+
+                        <img src="download.png"
+                            alt="Purified water gallon container"
+                            class="product-image">
+
+                        <div class="product-info">
+
+                            <h3>Purified Water</h3>
+
+                            <p>
+                                Malinis at fresh, swak sa everyday drinking!
+                            </p>
+
+                            <h4>₱40.00 <span>/ gallon</span></h4>
+
+                            <button class="add-button" data-product="purified">
+                                Add to Order
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER CART -->
+                <div class="order-box" id="order">
+
+                    <div class="order-heading">
+                        <p class="small-heading">YOUR ORDER</p>
+                        <h2>Order Summary</h2>
+                    </div>
+
+                    <div id="cartItems">
+                        <p class="empty-cart">
+                            No items added yet. Choose a product first.
+                        </p>
+                    </div>
+
+                    <div class="total-row">
+                        <span>Total</span>
+                        <strong id="cartTotal">₱0.00</strong>
+                    </div>
+
+                    <p class="delivery-note">
+                        Delivery fee is included.
+                    </p>
+
+                </div>
+
+
+                <!-- CUSTOMER ORDER FORM -->
+                <div class="form-container">
+
+                    <div class="section-heading">
+                        <p class="small-heading">CUSTOMER DETAILS</p>
+                        <h2>Delivery Information</h2>
+                        <p>Fill in your details to complete your order.</p>
+                    </div>
+
+                    <form id="orderForm">
+
+                        <div class="form-group">
+                            <label for="customerName">Full Name</label>
+                            <input type="text" id="customerName"
+                                placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerPhone">Contact Number</label>
+                            <input type="tel" id="customerPhone"
+                                placeholder="Enter your contact number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerAddress">Delivery Address</label>
+                            <textarea id="customerAddress"
+                                placeholder="Enter your complete address"
+                                rows="3" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            Place Order
+                        </button>
+
+                        <p id="orderMessage" class="order-message"
+                            aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANEL 3: HOW TO ORDER -->
+        <section class="how-to-order section-padding" id="how-to-order">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="small-heading">SIMPLE AND EASY</p>
+                    <h2>How to Order</h2>
+                    <p>Get your drinking water in just a few steps.</p>
+                </div>
+
+
+                <div class="steps-container">
+
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3>Choose Your Water</h3>
+                        <p>
+                            Browse our products and select mineral
+                            or purified water.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3>Add to Order</h3>
+                        <p>
+                            Choose how many gallons you need and
+                            check your order summary.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3>Enter Your Details</h3>
+                        <p>
+                            Provide your name, contact number,
+                            and delivery address.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <h3>Wait for Delivery</h3>
+                        <p>
+                            Your water order is ready for delivery
+                            in this website.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANEL 4: CONTACT -->
+        <section class="contact section-padding" id="contact">
+
+            <div class="container contact-container">
+
+                <div class="contact-text">
+
+                    <p class="small-heading">GET IN TOUCH</p>
+
+                    <h2>Need Help With Your Order?</h2>
+
+                    <p>
+                        Have questions or inquiries? You can reach
+                        us through our social media accounts.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>Contact Support</h3>
+
+                    <p class="contact-subtitle">
+                        Connect with Tubig Padala online.
+                    </p>
+
+
+                    <a class="social-link"
+                        href="https://www.facebook.com/daniel.morales.273563"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <img src="fb.logo.png" alt="Facebook logo">
+
+                        <span>
+                            <strong>Facebook</strong>
+                            <small>Visit our Facebook account</small>
+                        </span>
+
+                        <span class="social-arrow">↗</span>
+
+                    </a>
+
+
+                    <a class="social-link"
+                        href="https://www.instagram.com/niellazyy/"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <img src="ig.logo.avif" alt="Instagram logo">
+
+                        <span>
+                            <strong>Instagram</strong>
+                            <small>Follow us on Instagram</small>
+                        </span>
+
+                        <span class="social-arrow">↗</span>
+
+                    </a>
+
+
+                    <a class="social-link"
+                        href="https://www.youtube.com/@DanielMorales-z4z/posts"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <img src="yt.logo.png" alt="YouTube logo">
+
+                        <span>
+                            <strong>YouTube</strong>
+                            <small>Visit our YouTube channel</small>
+                        </span>
+
+                        <span class="social-arrow">↗</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <img src="last1.png" alt="Tubig Padala Logo">
+
+            <p>
+                © 2026 Tubig Padala Water Station.
+                Website project for educational purposes.
+            </p>
+
+            <a href="#home">Back to Top ↑</a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

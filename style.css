@@ -1,0 +1,754 @@
+/* =================================
+   GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263b4d;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-padding {
+    padding: 85px 0;
+}
+
+.small-heading {
+    color: #0783c5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    color: #075b91;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #647787;
+}
+
+
+/* =================================
+   HEADER AND NAVIGATION
+================================= */
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6edf1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    min-height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.main-nav a {
+    color: #263b4d;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #0783c5;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #075b91;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =================================
+   PANEL 1 - HOME
+================================= */
+
+.hero {
+    background-color: #edf8fc;
+    padding: 100px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-text h1 {
+    color: #075b91;
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    color: #5b7183;
+    font-size: 18px;
+    max-width: 590px;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+
+/* =================================
+   LIQUID ORDER BUTTON
+================================= */
+
+.liquid-button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 65px;
+    background-color: #075b91;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-txt {
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.liquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #20a6e5;
+    transition: height 0.4s;
+}
+
+.liquid-button:hover .liquid {
+    height: 100%;
+}
+
+.liquid-button:hover {
+    background-color: #0878b9;
+}
+
+
+/* =================================
+   PANEL 2 - PRODUCTS
+================================= */
+
+.products {
+    background-color: #ffffff;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e2eaf0;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(25, 80, 115, 0.10);
+}
+
+.product-image {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: #f3f9fc;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info h3 {
+    color: #075b91;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #687b89;
+    min-height: 55px;
+    margin-bottom: 18px;
+}
+
+.product-info h4 {
+    color: #075b91;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.product-info h4 span {
+    color: #778895;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.add-button {
+    width: 100%;
+    padding: 13px;
+    background-color: #087eb9;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #075b91;
+}
+
+
+/* =================================
+   ORDER SUMMARY
+================================= */
+
+.order-box {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 30px;
+    background-color: #f2f9fc;
+    border: 1px solid #e1edf3;
+    border-radius: 6px;
+}
+
+.order-heading h2 {
+    color: #075b91;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.empty-cart {
+    color: #7b8b97;
+    padding: 15px 0;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #dce7ed;
+}
+
+.cart-row-name {
+    flex: 1;
+    color: #334b5c;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-controls button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #087eb9;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: #075b91;
+}
+
+.cart-row strong {
+    min-width: 85px;
+    text-align: right;
+    color: #075b91;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    margin-top: 10px;
+    border-top: 1px solid #dce7ed;
+    font-size: 20px;
+}
+
+.total-row strong {
+    color: #075b91;
+    font-size: 24px;
+}
+
+.delivery-note {
+    margin-top: 10px;
+    color: #758895;
+    font-size: 13px;
+}
+
+
+/* =================================
+   CUSTOMER ORDER FORM
+================================= */
+
+.form-container {
+    max-width: 700px;
+    margin: 65px auto 0;
+    padding: 35px;
+    border: 1px solid #e2eaf0;
+    border-radius: 6px;
+}
+
+.form-container .section-heading {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #334b5c;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d4e0e8;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0783c5;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #075b91;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #087eb9;
+}
+
+.order-message {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =================================
+   PANEL 3 - HOW TO ORDER
+================================= */
+
+.how-to-order {
+    background-color: #f2f9fc;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    background-color: #ffffff;
+    padding: 28px 22px;
+    border: 1px solid #e2eaf0;
+    border-radius: 5px;
+}
+
+.step-number {
+    color: #0783c5;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.step-card h3 {
+    color: #075b91;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.step-card p {
+    color: #687b89;
+    font-size: 14px;
+}
+
+
+/* =================================
+   PANEL 4 - CONTACT
+================================= */
+
+.contact {
+    background-color: #ffffff;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.contact-text h2 {
+    color: #075b91;
+    font-size: 38px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.contact-text > p:last-child {
+    color: #687b89;
+    font-size: 17px;
+    max-width: 450px;
+}
+
+.contact-card {
+    padding: 32px;
+    border: 1px solid #e0e9ef;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.contact-card h3 {
+    color: #075b91;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.contact-subtitle {
+    color: #788895;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    color: #334b5c;
+    text-decoration: none;
+    border-top: 1px solid #edf1f4;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #f2f9fc;
+}
+
+.social-link img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.social-link span:nth-child(2) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-link strong {
+    font-size: 15px;
+}
+
+.social-link small {
+    color: #7a8994;
+    font-size: 12px;
+}
+
+.social-arrow {
+    color: #0783c5;
+    font-size: 22px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    background-color: #075b91;
+    padding: 30px 0;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-content img {
+    width: 105px;
+    height: 65px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.footer-content p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer-content a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 39px;
+    }
+
+    .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        gap: 35px;
+    }
+
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .nav-container {
+        min-height: 85px;
+    }
+
+    .logo img {
+        width: 135px;
+        height: 80px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #ffffff;
+        border-top: 1px solid #e6edf1;
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-start;
+    }
+
+    .main-nav.show {
+        display: flex;
+    }
+
+    .main-nav a {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 230px;
+    }
+
+    .order-box {
+        padding: 20px;
+    }
+
+    .cart-row {
+        flex-wrap: wrap;
+    }
+
+    .cart-row-name {
+        min-width: 100%;
+    }
+
+    .form-container {
+        padding: 22px;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-text h2 {
+        font-size: 30px;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
